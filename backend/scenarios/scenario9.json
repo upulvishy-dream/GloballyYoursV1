@@ -1,0 +1,36 @@
+{
+  "id": "scenario9",
+  "persona": "recruiter",
+  "country": "UAE",
+  "title": "Onboarding: ambiguous cross-cultural instructions",
+  "context": "onboarding",
+  "time_pressure": {"deadline": "first week", "slip_consequence": "task may be done incorrectly"},
+  "setting": "office / remote",
+  "stakeholders": [
+    {"name":"Local Manager","role":"supervisor","goal":"delegate clearly","red_lines":"cannot be questioned disrespectfully"},
+    {"name":"You","role":"New Hire","goal":"clarify task politely","red_lines":"cannot offend"}
+  ],
+  "culture_profile_used": {
+    "directness":"indirect",
+    "context":"high",
+    "power_distance":"high",
+    "time_orientation":"relationship-first",
+    "face_harmony":"very important",
+    "etiquette_cues":["ask respectful clarifications","propose plan when asking","mentor guidance encouraged"],
+    "deal_risks":["asking bluntly","ignoring norms"]
+  },
+  "roleplay_script": {
+    "opening":"Let’s clarify the task together.",
+    "turns":[
+      {"id":"T1","stakeholder_goal_shift":"assess respect","agent_guidance":"Warm if user asks politely; cool if too direct."},
+      {"id":"T2","stakeholder_goal_shift":"confirm understanding","agent_guidance":"Offer plan and request approval."},
+      {"id":"T3","stakeholder_goal_shift":"resolve ambiguity","agent_guidance":"Suggest mentor or step-wise clarification."}
+    ]
+  },
+  "evaluation_rubric": {
+    "weights":{"STR":1,"NEG":1,"EMP":2,"OPS":2,"RSK":1,"COM":2,"CULT":2},
+    "cultural_markers_positive":["respectful clarification","plan proposal","mentor engagement"],
+    "cultural_markers_negative":["direct questioning","ignores hierarchy"]
+  },
+  "expected_responses":["Polite clarification","Confirm plan","Seek mentor guidance"]
+}

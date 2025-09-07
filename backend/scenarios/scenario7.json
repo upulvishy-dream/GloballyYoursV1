@@ -1,0 +1,36 @@
+{
+  "id": "scenario7",
+  "persona": "recruiter",
+  "country": "US",
+  "title": "Interview: candidate avoids direct answers",
+  "context": "talent assessment",
+  "time_pressure": {"deadline": "end of interview", "slip_consequence": "cannot evaluate properly"},
+  "setting": "Zoom interview",
+  "stakeholders": [
+    {"name":"Candidate","role":"interviewee","goal":"give safe answers","red_lines":"cannot be pressured"},
+    {"name":"You","role":"Recruiter","goal":"assess soft skills","red_lines":"cannot misinterpret signals"}
+  ],
+  "culture_profile_used": {
+    "directness":"medium",
+    "context":"medium",
+    "power_distance":"low",
+    "time_orientation":"task-first",
+    "face_harmony":"moderate",
+    "etiquette_cues":["ask behavioral examples","clarify expectations politely"],
+    "deal_risks":["accepting vague answers","missing cues"]
+  },
+  "roleplay_script": {
+    "opening":"Let’s discuss your past project challenges.",
+    "turns":[
+      {"id":"T1","stakeholder_goal_shift":"assess concreteness","agent_guidance":"Probe for examples; be patient."},
+      {"id":"T2","stakeholder_goal_shift":"clarify metrics/results","agent_guidance":"Follow-up questions; adjust tone."},
+      {"id":"T3","stakeholder_goal_shift":"confirm understanding","agent_guidance":"Reassure candidate; summarize key points."}
+    ]
+  },
+  "evaluation_rubric": {
+    "weights":{"STR":1,"NEG":1,"EMP":2,"OPS":1,"RSK":1,"COM":2,"CULT":2},
+    "cultural_markers_positive":["asks for examples","behavioral prompts","clarifies expectations"],
+    "cultural_markers_negative":["ignores vagueness","pressures candidate"]
+  },
+  "expected_responses":["Behavioral prompts","Follow-up","Reassure"]
+}

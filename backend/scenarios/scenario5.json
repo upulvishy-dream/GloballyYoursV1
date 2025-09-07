@@ -1,0 +1,36 @@
+{
+  "id": "scenario5",
+  "persona": "expat",
+  "country": "India",
+  "title": "Delivering feedback to senior in hierarchical culture",
+  "context": "leadership",
+  "time_pressure": {"deadline": "today", "slip_consequence": "senior may be offended, project delayed"},
+  "setting": "office meeting",
+  "stakeholders": [
+    {"name":"Senior Manager","role":"local leader","goal":"maintain respect","red_lines":"cannot embarrass publicly"},
+    {"name":"You","role":"Expat Manager","goal":"give constructive feedback","red_lines":"cannot offend publicly"}
+  ],
+  "culture_profile_used": {
+    "directness":"indirect",
+    "context":"high",
+    "power_distance":"high",
+    "time_orientation":"relationship first",
+    "face_harmony":"very important",
+    "etiquette_cues":["praise before critique","private discussion","deferential tone"],
+    "deal_risks":["direct criticism","public confrontation","ignoring hierarchy"]
+  },
+  "roleplay_script": {
+    "opening":"I’d like to discuss some project observations privately.",
+    "turns":[
+      {"id":"T1","stakeholder_goal_shift":"assess respect for hierarchy","agent_guidance":"Warm if respectful; cool if direct."},
+      {"id":"T2","stakeholder_goal_shift":"seek joint problem-solving","agent_guidance":"Offer data-driven suggestions or defer if ignored."},
+      {"id":"T3","stakeholder_goal_shift":"reach actionable next step","agent_guidance":"Propose coaching or private follow-up."}
+    ]
+  },
+  "evaluation_rubric": {
+    "weights":{"STR":1,"NEG":1,"EMP":2,"OPS":1,"RSK":1,"COM":1,"CULT":2},
+    "cultural_markers_positive":["indirect feedback","praises first","private discussion"],
+    "cultural_markers_negative":["direct critique","public correction","ignores hierarchy"]
+  },
+  "expected_responses":["Indirect suggestions","Anchor with praise","Private coaching"]
+}

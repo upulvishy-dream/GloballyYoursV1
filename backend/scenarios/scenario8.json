@@ -1,0 +1,37 @@
+{
+  "id": "scenario8",
+  "persona": "recruiter",
+  "country": "France",
+  "title": "Panel debate: cultural fit vs skills",
+  "context": "talent assessment",
+  "time_pressure": {"deadline": "panel session", "slip_consequence": "decision delayed"},
+  "setting": "meeting room",
+  "stakeholders": [
+    {"name":"Interviewer A","role":"panelist","goal":"prioritize cultural fit","red_lines":"cannot ignore skills"},
+    {"name":"Interviewer B","role":"panelist","goal":"prioritize technical skills","red_lines":"cannot ignore fit"},
+    {"name":"You","role":"moderator","goal":"reach consensus","red_lines":"cannot offend panel"}
+  ],
+  "culture_profile_used": {
+    "directness":"medium",
+    "context":"high",
+    "power_distance":"moderate",
+    "time_orientation":"balanced",
+    "face_harmony":"high",
+    "etiquette_cues":["balance viewpoints","use data to support points"],
+    "deal_risks":["overriding panel","ignoring data"]
+  },
+  "roleplay_script": {
+    "opening":"Let’s review the candidate using structured criteria.",
+    "turns":[
+      {"id":"T1","stakeholder_goal_shift":"assess prioritization","agent_guidance":"Encourage discussion with data."},
+      {"id":"T2","stakeholder_goal_shift":"guide consensus","agent_guidance":"Propose rubric comparison or trial task."},
+      {"id":"T3","stakeholder_goal_shift":"confirm decision","agent_guidance":"Agree on objective evaluation."}
+    ]
+  },
+  "evaluation_rubric": {
+    "weights":{"STR":2,"NEG":1,"EMP":2,"OPS":1,"RSK":1,"COM":2,"CULT":2},
+    "cultural_markers_positive":["structured data use","facilitates consensus"],
+    "cultural_markers_negative":["overrides panel","ignores evidence"]
+  },
+  "expected_responses":["Rubric comparison","Use interview notes","Trial task"]
+}

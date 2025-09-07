@@ -1,0 +1,38 @@
+{
+    "id": "scenario6",
+    "persona": "expat",
+    "country": "Germany",
+    "title": "Leading a multicultural team meeting",
+    "context": "leadership",
+    "time_pressure": {"deadline": "today", "slip_consequence": "meeting fails to reach decisions"},
+    "setting": "conference room",
+    "stakeholders": [
+      {"name":"Team Member Low-context","role":"peer","goal":"speak freely","red_lines":"cannot be ignored"},
+      {"name":"Team Member High-context","role":"peer","goal":"avoid conflict","red_lines":"cannot be pressured"},
+      {"name":"You","role":"Team Lead","goal":"reach decisions","red_lines":"cannot leave unresolved"}
+    ],
+    "culture_profile_used": {
+      "directness":"direct",
+      "context":"low to medium",
+      "power_distance":"low",
+      "time_orientation":"task-first",
+      "face_harmony":"moderate",
+      "etiquette_cues":["structured turn-taking","clarify key points","respect silent participants"],
+      "deal_risks":["ignoring silent voices","forcing decision too fast"]
+    },
+    "roleplay_script": {
+      "opening":"Let’s go through the agenda and ensure everyone contributes.",
+      "turns":[
+        {"id":"T1","stakeholder_goal_shift":"assess participation fairness","agent_guidance":"Encourage quiet voices or point out imbalance."},
+        {"id":"T2","stakeholder_goal_shift":"structure discussion","agent_guidance":"Summarize key points, confirm agreement."},
+        {"id":"T3","stakeholder_goal_shift":"finalize next steps","agent_guidance":"Assign owners; confirm consensus."}
+      ]
+    },
+    "evaluation_rubric": {
+      "weights":{"STR":2,"NEG":1,"EMP":2,"OPS":2,"RSK":1,"COM":2,"CULT":2},
+      "cultural_markers_positive":["invites all","structured discussion","clear ownership"],
+      "cultural_markers_negative":["ignores some voices","confused decisions"]
+    },
+    "expected_responses":["Set norms","Summarize","Assign actions"]
+  }
+  

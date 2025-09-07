@@ -1,0 +1,5 @@
+fastapi==0.95.0
+python-dotenv==1.0.0
+google-generativeai==0.4.1
+# uvicorn is useful for local dev; Vercel doesn't need you to run it
+uvicorn==0.22.0

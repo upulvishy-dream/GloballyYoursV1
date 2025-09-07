@@ -1,0 +1,35 @@
+{
+  "id": "scenario1",
+  "persona": "student",
+  "country": "US",
+  "title": "Group project: missing contributions",
+  "context": "teamwork",
+  "time_pressure": {"deadline": "3 days", "slip_consequence": "team misses submission"},
+  "setting": "university classroom",
+  "stakeholders": [
+    {"name":"Teammate A","role":"peer","goal":"deliver good quality work","red_lines":"cannot skip tasks"},
+    {"name":"You","role":"student","goal":"complete project on time","red_lines":"cannot miss deadlines"}
+  ],
+  "culture_profile_used": {
+    "directness":"medium",
+    "context":"medium",
+    "power_distance":"low",
+    "time_orientation":"task-first",
+    "face_harmony":"moderate",
+    "etiquette_cues":["address directly but politely"],
+    "deal_risks":["ignoring team norms","missing deadlines"]
+  },
+  "roleplay_script": {
+    "opening":"Hey, we need to talk about the upcoming submission.",
+    "turns":[
+      {"id":"T1","stakeholder_goal_shift":"assess respect for deadlines","agent_guidance":"If user acknowledges delay, warm; if ignores, colder."},
+      {"id":"T2","stakeholder_goal_shift":"propose solution","agent_guidance":"Suggest realistic adjustments or escalate if ignored."}
+    ]
+  },
+  "evaluation_rubric": {
+    "weights":{"STR":1,"NEG":1,"EMP":2,"OPS":1,"RSK":1,"COM":1,"CULT":2},
+    "cultural_markers_positive":["respects deadlines","offers solutions politely"],
+    "cultural_markers_negative":["ignores teammate","blames publicly"]
+  },
+  "expected_responses":["Raise issue politely","Offer help","Escalate if unresolved"]
+}

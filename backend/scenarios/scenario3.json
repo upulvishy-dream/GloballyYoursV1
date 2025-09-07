@@ -1,0 +1,35 @@
+{
+  "id": "scenario3",
+  "persona": "student",
+  "country": "Germany",
+  "title": "Presentation: timing mismatch",
+  "context": "teamwork",
+  "time_pressure": {"deadline": "tomorrow", "slip_consequence": "lose points"},
+  "setting": "classroom presentation",
+  "stakeholders": [
+    {"name":"Team Member B","role":"peer","goal":"cover full content","red_lines":"cannot skip slides"},
+    {"name":"You","role":"student","goal":"finish on time","red_lines":"cannot exceed slot"}
+  ],
+  "culture_profile_used": {
+    "directness":"direct",
+    "context":"low",
+    "power_distance":"low-moderate",
+    "time_orientation":"punctuality",
+    "face_harmony":"secondary",
+    "etiquette_cues":["be precise","use agenda visuals"],
+    "deal_risks":["overlong presentation","unclear structure"]
+  },
+  "roleplay_script": {
+    "opening":"We need to review the timing of our slides.",
+    "turns":[
+      {"id":"T1","stakeholder_goal_shift":"assess timing respect","agent_guidance":"If user suggests timed rehearsal, warm; if ignores, colder."},
+      {"id":"T2","stakeholder_goal_shift":"adjust content","agent_guidance":"Offer compromise or insist on key points."}
+    ]
+  },
+  "evaluation_rubric": {
+    "weights":{"STR":1,"NEG":1,"EMP":1,"OPS":2,"RSK":1,"COM":2,"CULT":2},
+    "cultural_markers_positive":["timely suggestions","visual agenda","clear division"],
+    "cultural_markers_negative":["exceeds time","unclear division of slides"]
+  },
+  "expected_responses":["Agree on rehearsal","Politely interrupt","Use visual agenda"]
+}

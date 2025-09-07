@@ -1,0 +1,35 @@
+{
+  "id": "scenario2",
+  "persona": "student",
+  "country": "Japan",
+  "title": "Classroom debate: direct feedback",
+  "context": "communication",
+  "time_pressure": {"deadline": "today", "slip_consequence": "professor marks poorly"},
+  "setting": "classroom debate",
+  "stakeholders": [
+    {"name":"Professor","role":"instructor","goal":"receive critical feedback","red_lines":"disrespectful comments"},
+    {"name":"You","role":"student","goal":"give feedback politely","red_lines":"cannot appear rude"}
+  ],
+  "culture_profile_used": {
+    "directness":"indirect",
+    "context":"very high",
+    "power_distance":"moderate-high",
+    "time_orientation":"process-first",
+    "face_harmony":"critical",
+    "etiquette_cues":["deferential language","soft phrasing"],
+    "deal_risks":["too direct","ignoring hierarchy"]
+  },
+  "roleplay_script": {
+    "opening":"Let’s discuss the debate points from today.",
+    "turns":[
+      {"id":"T1","stakeholder_goal_shift":"assess tone","agent_guidance":"If user uses deferential framing, warm; if too blunt, colder."},
+      {"id":"T2","stakeholder_goal_shift":"clarify critique","agent_guidance":"Probe for specificity; adjust tone based on respect shown."}
+    ]
+  },
+  "evaluation_rubric": {
+    "weights":{"STR":1,"NEG":1,"EMP":2,"OPS":1,"RSK":1,"COM":2,"CULT":2},
+    "cultural_markers_positive":["polite framing","indirect critique","respects hierarchy"],
+    "cultural_markers_negative":["blunt criticism","ignores cultural norms"]
+  },
+  "expected_responses":["Frame critique politely","Ask permission","Use examples"]
+}

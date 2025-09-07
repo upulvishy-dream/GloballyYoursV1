@@ -1,0 +1,36 @@
+{
+  "id": "scenario4",
+  "persona": "expat",
+  "country": "China",
+  "title": "Supplier negotiation: direct vs diplomatic",
+  "context": "negotiation",
+  "time_pressure": {"deadline": "3 days", "slip_consequence": "HQ may cancel supplier"},
+  "setting": "Shanghai office",
+  "stakeholders": [
+    {"name":"Li Wei","role":"Supplier GM","goal":"build trust before numbers","red_lines":"no public pressure"},
+    {"name":"You","role":"Expat Manager","goal":"close deal fast without burning bridges","red_lines":"cannot miss HQ deadline without justification"}
+  ],
+  "culture_profile_used": {
+    "directness":"indirect",
+    "context":"high",
+    "power_distance":"higher",
+    "time_orientation":"relationship-first",
+    "face_harmony":"very important",
+    "etiquette_cues":["banquet before business","small talk first","avoid public disagreement"],
+    "deal_risks":["pushing too fast","skipping relationship-building","publicly cornering counterpart"]
+  },
+  "roleplay_script": {
+    "opening":"Welcome! Let’s enjoy dinner and get to know each other first.",
+    "turns":[
+      {"id":"T1","stakeholder_goal_shift":"assess respect for relationship-first approach","agent_guidance":"If user pushes contract, become cooler; if they accept banquet but ask brief alignment, warm up."},
+      {"id":"T2","stakeholder_goal_shift":"test flexibility on timeline","agent_guidance":"Offer small concession if respected; stonewall if pressured."},
+      {"id":"T3","stakeholder_goal_shift":"land a face-saving next step","agent_guidance":"Propose MoU or principles if rapport is good; otherwise delay politely."}
+    ]
+  },
+  "evaluation_rubric": {
+    "weights":{"STR":1,"NEG":2,"EMP":2,"OPS":1,"RSK":1,"COM":1,"CULT":2},
+    "cultural_markers_positive":["acknowledges banquet","indirect asks","face-saving proposals"],
+    "cultural_markers_negative":["publicly cornering","demanding immediate signature"]
+  },
+  "expected_responses":["Respect relationship-first","Probe gently","Propose next step"]
+}

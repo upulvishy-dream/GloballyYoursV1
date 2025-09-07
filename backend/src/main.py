@@ -153,7 +153,7 @@ async def chat(request: Request):
             return {"reply": ai_json.get("reply", "...")}
 
         # --- If AI says end: run evaluation ---
-        elif ai_json.get("status") == "end":
+        # --- elif ai_json.get("status") == "end":
             evaluator_prompt = build_evaluator_prompt(
                 chat_log + [{"sender": "user", "text": message}, {"sender": "bot", "text": ai_json.get("reply", "")}],
                 scenario,
@@ -187,6 +187,20 @@ async def chat(request: Request):
                 }
 
             return {"evaluation": evaluation_data}
+        elif ai_json.get("status") == "end":
+            assistant_text = ai_json.get("reply", "")
+            return {
+                "id": scenario_id,
+                "input": message,
+                "scenario_id": scenario_id,
+                "region": scenario.get("country", ""),
+                "assistant_output": assistant_text,
+                "conversation": chat_log + [
+                {"sender": "user", "text": message},
+                {"sender": "bot", "text": assistant_text}
+                ],
+                "metadata": {"status": "end", "model": "gemini-1.5-flash-latest"}
+                }
 
         # --- If AI JSON is malformed but had a reply ---
         else:
